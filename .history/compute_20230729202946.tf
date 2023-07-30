@@ -12,7 +12,7 @@ resource "random_id" "random" {
 
 
 # Create ec2 Server 1
-resource "aws_instance" "ansy_instance" {
+resource "aws_instance" "ansy_instance1" {
   ami                    = data.aws_ami.server_ami.id
   instance_type          = var.main_instance_type
   subnet_id              = aws_subnet.ansy-private-subnet[count.index].id
